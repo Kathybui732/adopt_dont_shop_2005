@@ -207,6 +207,7 @@
           1,
           null,
           1,
+          1,
           null
         ]
       },
@@ -216,7 +217,39 @@
           null
         ]
       },
-      "/Users/kathybui/turing/2-mod/projects/adopt_dont_shop_2005/spec/models/shelter_index_spec.rb": {
+      "/Users/kathybui/turing/2-mod/projects/adopt_dont_shop_2005/spec/features/shelter/show_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/kathybui/turing/2-mod/projects/adopt_dont_shop_2005/spec/models/shelter/shelter_index_spec.rb": {
         "lines": [
           1,
           null,
@@ -255,6 +288,10 @@
           1,
           1,
           null,
+          null,
+          1,
+          1,
+          null,
           null
         ]
       },
@@ -266,6 +303,6 @@
         ]
       }
     },
-    "timestamp": 1593651161
+    "timestamp": 1593655196
   }
 }
