@@ -3,7 +3,7 @@ require "rails_helper"
 RSpec.describe "delete shelter from index" do
   describe "I visit a shelter show page" do
     it "can display a link and delete the shelter" do
-      shelter_1 = Shelter.create(name: "Shelter 1", address: "123 shelter lane", city: "Denver", state: "CO", zip: 80207)
+      shelter_1 = Shelter.create!(name: "Shelter 1", address: "123 shelter lane", city: "Denver", state: "CO", zip: 80207)
 
       visit "/shelters"
       expect(page).to have_content("Shelter 1")

@@ -3,7 +3,7 @@ require "rails_helper"
 RSpec.describe "update shelter" do
   describe "when I visit a shelter show page" do
     it "can update the shelter" do
-      shelter_1 = Shelter.create(name: "Shelter 1", address: "123 shelter lane", city: "Denver", state: "CO", zip: 80207)
+      shelter_1 = Shelter.create!(name: "Shelter 1", address: "123 shelter lane", city: "Denver", state: "CO", zip: 80207)
       visit '/shelters'
 
       click_on "Edit #{shelter_1.name}"

@@ -30,8 +30,9 @@ class SheltersController < ApplicationController
     redirect_to "/shelters"
   end
 
-  private
+  # helper methods are put under private
+  private #creating "strong" params
   def shelter_params
-    params.permit(:name, :address, :city, :state, :zip)
+    params.permit(:name, :address, :city, :state, :zip) # permit allows us to only pull out the parameters that we need directly in the public methods
   end
 end

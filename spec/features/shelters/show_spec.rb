@@ -2,8 +2,8 @@ require "rails_helper"
 
 RSpec.describe "shelter show" do
   it "displays the shelter with that id including the shelter's: name, address, city, state and zip" do
-    shelter_1 = Shelter.create(name: "Shelter 1", address: "123 shelter lane", city: "Denver", state: "CO", zip: 80207)
-    shelter_2 = Shelter.create(name: "Shelter 2", address: "123 shelter lane", city: "Denver", state: "CO", zip: 80207)
+    shelter_1 = Shelter.create!(name: "Shelter 1", address: "123 shelter lane", city: "Denver", state: "CO", zip: 80207)
+    shelter_2 = Shelter.create!(name: "Shelter 2", address: "123 shelter lane", city: "Denver", state: "CO", zip: 80207)
 
     visit "/shelters/#{shelter_1.id}"
 
