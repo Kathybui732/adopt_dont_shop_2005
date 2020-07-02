@@ -120,7 +120,7 @@ Then I see the name of each shelter in the system
 ```
 
 ```
-[ ] done
+[X] done
 
 User Story 3, Shelter Show
 
@@ -135,7 +135,7 @@ Then I see the shelter with that id including the shelter's:
 ```
 
 ```
-[ ] done
+[X] done
 
 User Story 4, Shelter Creation
 
