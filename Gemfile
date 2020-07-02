@@ -40,6 +40,8 @@ group :development, :test do
   gem 'pry'
   gem 'simplecov'
   gem 'shoulda-matchers'
+  gem 'active_designer'
+  gem "nyan-cat-formatter"
 end
 
 group :development do
