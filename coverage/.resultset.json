@@ -212,12 +212,44 @@
           1,
           1,
           1,
+          1,
           null
         ]
       },
       "/Users/kathybui/turing/2-mod/projects/adopt_dont_shop_2005/app/helpers/application_helper.rb": {
         "lines": [
           1,
+          null
+        ]
+      },
+      "/Users/kathybui/turing/2-mod/projects/adopt_dont_shop_2005/spec/features/shelter/delete_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           null
         ]
       },
@@ -351,14 +383,14 @@
         "lines": [
           1,
           1,
-          5,
+          7,
           null,
           null,
           1,
           null,
           null,
           1,
-          1,
+          2,
           null,
           null,
           1,
@@ -376,9 +408,9 @@
           1,
           null,
           null,
-          null,
-          null,
-          null,
+          1,
+          1,
+          1,
           null,
           null,
           1,
@@ -396,6 +428,6 @@
         ]
       }
     },
-    "timestamp": 1593669599
+    "timestamp": 1593671543
   }
 }
