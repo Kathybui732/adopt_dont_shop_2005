@@ -1,0 +1,14 @@
+
+<h1 class="page-header"><%= @shelter.name %></h1><br>
+<br>
+<h2 class="page-subtitle">Available Pets</h2>
+<ul class="list">
+  <% @pets.each do |pet| %>
+    <% if @shelter.id == pet.shelter_id %>
+      <%= image_tag(pet.image, alt: pet.name, method: :get) %>
+      <p><%= pet.name %></p>
+      <p><%= pet.sex %>, <%= pet.approximate_age %></p>
+    <% else %>
+    <% end %>
+  <% end %>
+</ul>

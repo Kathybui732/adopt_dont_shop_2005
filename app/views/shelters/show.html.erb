@@ -1,8 +1,19 @@
-<h1><%= @shelter.name %></h1>
-
+<h1 class="page-header"><%= @shelter.name %></h1><br>
+<h2 class="page-subtitle">Information</h2>
 <p>Name: <%= @shelter.name %></p>
 <p>Address: <%= @shelter.address %></p>
 <p>City: <%= @shelter.city %></p>
 <p>State: <%= @shelter.state %></p>
 <p>Zip: <%= @shelter.zip %></p>
-<%= link_to "Delete #{@shelter.name}", "/shelters/#{@shelter.id}", method: :delete %> 
+<br>
+<h2 class="page-section">Shelter's Pet(s): </h2>
+<ul id= "pet-list">
+  <% @shelter.pets.each do |pet| %>
+  <%= link_to pet.name, method: :get %><br />
+  <% end %>
+</ul>
+<br>
+<br>
+<%= link_to "Delete #{@shelter.name}", "/shelters/#{@shelter.id}", method: :delete %>
+
+<%# Need to add link for pet path %>
