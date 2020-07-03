@@ -41,6 +41,7 @@
           null,
           null,
           1,
+          1,
           null,
           null
         ]
@@ -213,6 +214,7 @@
           1,
           1,
           1,
+          1,
           null
         ]
       },
@@ -222,146 +224,7 @@
           null
         ]
       },
-      "/Users/kathybui/turing/2-mod/projects/adopt_dont_shop_2005/spec/features/shelters/delete_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/kathybui/turing/2-mod/projects/adopt_dont_shop_2005/spec/features/shelters/shelter_index_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/kathybui/turing/2-mod/projects/adopt_dont_shop_2005/spec/features/shelters/show_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/kathybui/turing/2-mod/projects/adopt_dont_shop_2005/spec/features/shelters/update_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/kathybui/turing/2-mod/projects/adopt_dont_shop_2005/spec/models/shelters/shelter_index_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          2,
-          2,
-          2,
-          2,
-          2,
-          null,
-          null
-        ]
-      },
-      "/Users/kathybui/turing/2-mod/projects/adopt_dont_shop_2005/app/models/shelter.rb": {
+      "/Users/kathybui/turing/2-mod/projects/adopt_dont_shop_2005/app/models/pet.rb": {
         "lines": [
           1,
           1,
@@ -379,44 +242,11 @@
           null
         ]
       },
-      "/Users/kathybui/turing/2-mod/projects/adopt_dont_shop_2005/app/controllers/shelters_controller.rb": {
+      "/Users/kathybui/turing/2-mod/projects/adopt_dont_shop_2005/app/controllers/pets_controller.rb": {
         "lines": [
           1,
           1,
-          7,
-          null,
-          null,
           1,
-          null,
-          null,
-          1,
-          2,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
-          2,
           null,
           null
         ]
@@ -429,6 +259,6 @@
         ]
       }
     },
-    "timestamp": 1593720813
+    "timestamp": 1593794953
   }
 }
