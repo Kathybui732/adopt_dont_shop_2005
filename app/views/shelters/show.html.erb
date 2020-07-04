@@ -1,6 +1,14 @@
-<h1 class="page-header"><%= @shelter.name %></h1><br>
+<h1 class="page-header"><%= link_to "#{@shelter.name}", "/shelters/#{@shelter.id}", method: :get %></h1><br>
+
+<nav class="menu">
+  <ul>
+    <li><%= link_to "Shelters", "/shelters", method: :get %></li>
+    <li><%= link_to "Pets", "/pets", method: :get %></li>
+  </ul>
+</nav>
+
 <h2 class="page-subtitle">Information</h2>
-<p>Name: <%= @shelter.name %></p>
+<p>Name: <%= link_to "#{@shelter.name}", "/shelters/#{@shelter.id}", method: :get %></p>
 <p>Address: <%= @shelter.address %></p>
 <p>City: <%= @shelter.city %></p>
 <p>State: <%= @shelter.state %></p>
@@ -11,6 +19,9 @@
   <% @shelter.pets.each do |pet| %>
   <%= link_to pet.name, "/pets/#{pet.id}", method: :get %><br />
   <% end %>
+</ul>
+<ul class="list">
+  <%= link_to "See all of #{@shelter.name}'s pets", "/shelters/#{@shelter.id}/pets", method: :get %>
 </ul>
 <br>
 <br>

@@ -1,12 +1,19 @@
+<h1 class="page-header"><%= link_to "#{@shelter.name}", "/shelters/#{@shelter.id}", method: :get %></h1><br>
 
-<h1 class="page-header"><%= @shelter.name %></h1><br>
-<br>
+<nav class="menu">
+  <ul>
+    <li><%= link_to "Shelters", "/shelters", method: :get %></li>
+    <li><%= link_to "Pets", "/pets", method: :get %></li>
+  </ul>
+</nav>
+
 <h2 class="page-subtitle">Available Pets</h2>
+<p> <%= @pets.count %> pet's available for adoption </p>
 <ul class="list">
   <% @pets.each do |pet| %>
     <% if @shelter.id == pet.shelter_id %>
       <%= image_tag(pet.image, alt: pet.name, method: :get) %>
-      <p><%= pet.name %></p>
+      <p><%= link_to "#{pet.name}", "/pets/#{pet.id}", method: :get %></p>
       <p><%= pet.sex %>, <%= pet.approximate_age %></p>
       <p><%= pet.status %></p>
       <p><%= link_to "Edit #{pet.name}", "/pets/#{pet.id}/edit", method: :get %></p>
