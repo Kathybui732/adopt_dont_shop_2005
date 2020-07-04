@@ -1,24 +1,39 @@
-<h1 class="page-header">Add a new pet for adoption!</h1>
+<html>
+  <head>
+    <title>Add a new pet for adoption!</title>
+    <link rel="stylesheet" href="stylesheets/reset.css" title="text/css" />
+    <link rel="stylesheet" href="stylesheets/main.css" title="text/css" />
+  </head>
 
-<nav class="menu">
-  <ul>
-    <li><%= link_to "Shelters", "/shelters", method: :get %></li>
-    <li><%= link_to "Pets", "/pets", method: :get %></li>
-  </ul>
-</nav>
+  <body>
+    <header>
+      <h1>Add a new pet for adoption!</h1>
+      <nav>
+        <ul>
+          <li><%= link_to "Shelters", "/shelters", method: :get %></li>
+          <li><%= link_to "Pets", "/pets", method: :get %></li>
+        </ul>
+      </nav>
+    </header>
 
-<p class = "instructions">Please provide information about your pet</p>
-  <%= form_tag "/shelters/#{@shelter_id}/pets" do %>
-  <%= label_tag :image %>
-  <%= text_field_tag :image %><br>
-  <%= label_tag :name %>
-  <%= text_field_tag :name %><br>
-  <%= label_tag :description %>
-  <%= text_field_tag :description %><br>
-  <%= label_tag :approximate_age %>
-  <%= text_field_tag :approximate_age %><br>
-  <%= label_tag :sex %>
-  <%= text_field_tag :sex %><br>
-  <br>
-  <%= submit_tag "Create Pet" %>
-  <% end %>
+    <section class="form">
+      <h4>Please provide information about your pet</h4>
+      <p>
+        <%= form_tag "/shelters/#{@shelter_id}/pets" do %>
+          <%= label_tag :image %>
+          <%= text_field_tag :image %><br>
+          <%= label_tag :name %>
+          <%= text_field_tag :name %><br>
+          <%= label_tag :description %>
+          <%= text_field_tag :description %><br>
+          <%= label_tag :approximate_age %>
+          <%= text_field_tag :approximate_age %><br>
+          <%= label_tag :sex %>
+          <%= text_field_tag :sex %><br>
+          <br>
+          <%= submit_tag "Create Pet" %>
+        <% end %>
+      </p>
+    </section>
+  </body>
+</html>

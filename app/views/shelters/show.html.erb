@@ -1,29 +1,47 @@
-<h1 class="page-header"><%= link_to "#{@shelter.name}", "/shelters/#{@shelter.id}", method: :get %></h1><br>
+<html>
+  <head>
+    <title>@shelter.name</title>
+    <link rel="stylesheet" href="stylesheets/reset.css" title="text/css" />
+    <link rel="stylesheet" href="stylesheets/main.css" title="text/css" />
+  </head>
 
-<nav class="menu">
-  <ul>
-    <li><%= link_to "Shelters", "/shelters", method: :get %></li>
-    <li><%= link_to "Pets", "/pets", method: :get %></li>
-  </ul>
-</nav>
+  <body>
+    <header>
+      <h1><%= link_to "#{@shelter.name}", "/shelters/#{@shelter.id}" %></h1>
+      <nav>
+        <ul>
+          <li><%= link_to "Shelters", "/shelters" %></li>
+          <li><%= link_to "Pets", "/pets" %></li>
+        </ul>
+      </nav>
+    </header>
 
-<h2 class="page-subtitle">Information</h2>
-<p>Name: <%= link_to "#{@shelter.name}", "/shelters/#{@shelter.id}", method: :get %></p>
-<p>Address: <%= @shelter.address %></p>
-<p>City: <%= @shelter.city %></p>
-<p>State: <%= @shelter.state %></p>
-<p>Zip: <%= @shelter.zip %></p>
-<br>
-<h2 class="page-section">Shelter's Pet(s): </h2>
-<ul id= "pet-list">
-  <% @shelter.pets.each do |pet| %>
-  <%= link_to pet.name, "/pets/#{pet.id}", method: :get %><br />
-  <% end %>
-</ul>
-<ul class="list">
-  <%= link_to "See all of #{@shelter.name}'s pets", "/shelters/#{@shelter.id}/pets", method: :get %>
-</ul>
-<br>
-<br>
-<%= link_to "Edit #{@shelter.name}", "/shelters/#{@shelter.id}/edit" , method: :get %>
-<%= link_to "Delete #{@shelter.name}", "/shelters/#{@shelter.id}", method: :delete %>
+    <section class = "show-info">
+      <h3>Information</h3>
+      <br>
+      <ul>
+        <li><%= link_to "#{@shelter.name}", "/shelters/#{@shelter.id}" %></li>
+        <li><%= @shelter.address %><br>
+          <%= @shelter.city %>, <%= @shelter.state %> <%= @shelter.zip %></li>
+      </ul>
+    </section>
+
+    <section>
+      <article class = "show-index">
+        <h3>Shelter's Pet(s)</h3>
+        <% @shelter.pets.each do |pet| %>
+        <ul>
+          <li><%= link_to pet.name, "/pets/#{pet.id}" %></li>
+        </ul>
+        <% end %>
+        <p>
+          <%= link_to "See all of #{@shelter.name}'s pets", "/shelters/#{@shelter.id}/pets" %>
+        </p><br>
+        <br>
+        <p>
+          <%= link_to "Edit #{@shelter.name}", "/shelters/#{@shelter.id}/edit" %> || <%= link_to "Delete #{@shelter.name}", "/shelters/#{@shelter.id}", method: :delete %>
+        </p>
+      </article>
+    </section>
+  </body>
+</html>

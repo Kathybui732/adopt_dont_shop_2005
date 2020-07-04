@@ -1,19 +1,33 @@
-<h1 class="page-header"><%= link_to "#{@pet.name}", "/pets/#{@pet.id}", method: :get %></h1><br>
+<html>
+  <head>
+    <title><%= @pet.name %>'s Info</title>
+    <link rel="stylesheet" href="stylesheets/reset.css" title="text/css" />
+    <link rel="stylesheet" href="stylesheets/main.css" title="text/css" />
+  </head>
 
-<nav class="menu">
-  <ul>
-    <li><%= link_to "Shelters", "/shelters", method: :get %></li>
-    <li><%= link_to "Pets", "/pets", method: :get %></li>
-  </ul>
-</nav>
+  <body>
+    <header>
+      <h1 class="page-header"><%= link_to "#{@pet.name}", "/pets/#{@pet.id}", method: :get %></h1>
+      <nav>
+        <ul>
+          <li><%= link_to "Shelters", "/shelters", method: :get %></li>
+          <li><%= link_to "Pets", "/pets", method: :get %></li>
+        </ul>
+      </nav>
+    </header>
 
-<h2 class="page-subtitle">Information</h2><br>
-<br>
-<p><%= image_tag(@pet.image, alt: @pet.name, method: :get) %></p>
-<p>Status: <%= @pet.status %></p>
-<p><%= @pet.sex %>, <%= @pet.approximate_age %> years old</p>
-<p>Currently located at: <%= link_to "#{@pet.shelter.name}", "/shelters/#{@pet.shelter.id}", method: :get %></p>
-
-<%= link_to "Update Pet", "/pets/#{@pet.id}/edit", method: :get %>
-
-<%= link_to "Delete Pet", "/pets/#{@pet.id}", method: :delete %>
+    <section class = "pet-show-info">
+      <h3>Information</h3>
+      <p><%= image_tag(@pet.image, alt: @pet.name, class: "pet-show-info-image") %></p>
+      <ul>
+        <li><i><%= @pet.sex %></i>, <%= @pet.approximate_age %> years old</li>
+        <li><%= @pet.description %></li>
+        <li><strong><%= @pet.status %></strong></li>
+        <li>Currently located at: <%= link_to "#{@pet.shelter.name}", "/shelters/#{@pet.shelter.id}" %></li>
+      </ul>
+      <p>
+        <%= link_to "Update Pet", "/pets/#{@pet.id}/edit", method: :get %> || <%= link_to "Delete Pet", "/pets/#{@pet.id}", method: :delete %>
+      </p>
+    </section>
+  </body>
+</html>

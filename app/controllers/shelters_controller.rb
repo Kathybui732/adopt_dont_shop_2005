@@ -33,7 +33,6 @@ class SheltersController < ApplicationController
   def pets_index
     @shelter = Shelter.find(params[:shelter_id])
     @pets = @shelter.pets
-    
   end
 
   # helper methods are put under private

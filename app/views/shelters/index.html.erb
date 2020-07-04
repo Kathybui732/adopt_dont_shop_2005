@@ -1,17 +1,36 @@
-<h1 class = "page-header">All Shelters</h1>
+<html>
+  <head>
+    <title>All Shelters</title>
+    <link rel="stylesheet" href="stylesheets/reset.css" title="text/css" />
+    <link rel="stylesheet" href="stylesheets/main.css" title="text/css" />
+  </head>
 
-<nav class="menu">
-  <ul>
-    <li><%= link_to "Shelters", "/shelters", method: :get %></li>
-    <li><%= link_to "Pets", "/pets", method: :get %></li>
-  </ul>
-</nav>
+  <body>
+    <header>
+      <h1>All Shelters</h1>
+      <nav>
+        <ul>
+          <li><%= link_to "Shelters", "/shelters" %></li>
+          <li><%= link_to "Pets", "/pets" %></li>
+        </ul>
+      </nav>
+    </header>
 
-<ul id = "all-index">
-  <% @shelters.each do |shelter| %>
-  <p><%= link_to "#{shelter.name}", "/shelters/#{shelter.id}" %>
-  <%= link_to "Edit #{shelter.name}", "/shelters/#{shelter.id}/edit" , method: :get %> <%= link_to "Delete #{shelter.name}", "/shelters/#{shelter.id}" , method: :delete %>
-  <% end %></p>
-</ul><br>
-<br>
-<%= link_to "New Shelter", '/shelters/new', method: :get %>
+    <section class = "shelter-index">
+      <% @shelters.each do |shelter| %>
+      <ul>
+        <li><%= link_to "#{shelter.name}", "/shelters/#{shelter.id}" %></li>
+        <li><%= shelter.address %><br>
+          <%= shelter.city %>, <%= shelter.state %> <%= shelter.zip %>
+        </li>
+      </ul>
+      <p>
+        <%= link_to "Edit #{shelter.name}", "/shelters/#{shelter.id}/edit" %> || <%= link_to "Delete #{shelter.name}", "/shelters/#{shelter.id}" %>
+      </p>
+      <% end %>
+      <p>
+        <%= link_to "New Shelter", '/shelters/new' %>
+      </p>
+    </section>
+  </body>
+</html>

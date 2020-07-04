@@ -1,14 +1,39 @@
-<h1 class = "page-header">Edit <%= link_to "#{@shelter.name}", "/shelters/#{@shelter.id}", method: :get %></h1>
+<html>
+  <head>
+    <title>Edit <% @shelter.name %></title>
+    <link rel="stylesheet" href="stylesheets/reset.css" title="text/css" />
+    <link rel="stylesheet" href="stylesheets/main.css" title="text/css" />
+  </head>
 
-<nav class="menu">
-  <ul>
-    <li><%= link_to "Shelters", "/shelters", method: :get %></li>
-    <li><%= link_to "Pets", "/pets", method: :get %></li>
-  </ul>
-</nav>
+  <body>
+    <header>
+      <h1>Edit <%= link_to "#{@shelter.name}", "/shelters/#{@shelter.id}" %></h1>
+      <nav>
+        <ul>
+          <li><%= link_to "Shelters", "/shelters" %></li>
+          <li><%= link_to "Pets", "/pets" %></li>
+        </ul>
+      </nav>
+    </header>
 
-<%= form_tag "/shelters/#{@shelter.id}", method: :patch do %>
-  <%= label_tag :name %><br>
-  <%= text_field_tag :name, "#{@shelter.name}" %><br>
-  <%= submit_tag "Update Shelter" %><br>
-<% end %>
+    <section class = "form">
+      <h4>Edit shelter's information here:</h4>
+      <p>
+        <%= form_tag "/shelters/#{@shelter.id}", method: :patch do %>
+        <%= label_tag :name %><br>
+        <%= text_field_tag :name, "#{@shelter.name}" %><br>
+        <%= label_tag :address %><br>
+        <%= text_field_tag :address, "#{@shelter.address}" %><br>
+        <%= label_tag :city %><br>
+        <%= text_field_tag :city, "#{@shelter.city}" %><br>
+        <%= label_tag :state %><br>
+        <%= text_field_tag :state, "#{@shelter.state}" %><br>
+        <%= label_tag :zip %><br>
+        <%= text_field_tag :zip, "#{@shelter.zip}" %><br>
+        <br>
+        <%= submit_tag "Update Shelter" %><br>
+        <% end %>
+      </p>
+    </section>
+  </body>
+</html>
