@@ -25,7 +25,7 @@
         </li>
       </ul>
       <p>
-        <%= link_to "Edit #{shelter.name}", "/shelters/#{shelter.id}/edit" %> || <%= link_to "Delete #{shelter.name}", "/shelters/#{shelter.id}" %>
+        <%= link_to "Edit #{shelter.name}", "/shelters/#{shelter.id}/edit" %> || <%= link_to "Delete #{shelter.name}", "/shelters/#{shelter.id}", method: :delete %>
       </p>
       <% end %>
       <p>
