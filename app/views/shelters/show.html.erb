@@ -9,7 +9,7 @@
 <h2 class="page-section">Shelter's Pet(s): </h2>
 <ul id= "pet-list">
   <% @shelter.pets.each do |pet| %>
-  <%= link_to pet.name, method: :get %><br />
+  <%= link_to pet.name, "/pets/#{pet.id}", method: :get %><br />
   <% end %>
 </ul>
 <br>
