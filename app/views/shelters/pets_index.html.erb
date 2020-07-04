@@ -9,6 +9,7 @@
       <p><%= pet.name %></p>
       <p><%= pet.sex %>, <%= pet.approximate_age %></p>
       <p><%= pet.status %></p>
+      <p><%= link_to "Edit #{pet.name}", "/pets/#{pet.id}/edit" %></p>
     <% else %>
     <% end %>
   <% end %>
