@@ -4,17 +4,20 @@ RSpec.describe "update shelter" do
   describe "when I visit a shelter show page" do
     it "can update the shelter" do
       shelter_1 = Shelter.create!(name: "Shelter 1", address: "123 shelter lane", city: "Denver", state: "CO", zip: 80207)
+
       visit '/shelters'
+      expect(page).to have_content("Shelter 1")
 
       click_on "Edit #{shelter_1.name}"
-
       expect(current_path).to eq("/shelters/#{shelter_1.id}/edit")
 
       fill_in :name, with: "Updated Pet Shelter"
-      click_on "Update Shelter"
 
+      click_on "Update Shelter"
       expect(current_path).to eq('/shelters')
+
       expect(page).to have_content("Updated Pet Shelter")
+      expect(page).to_not have_content("Shelter 1")
     end
   end
 end

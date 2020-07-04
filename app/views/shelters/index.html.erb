@@ -2,7 +2,7 @@
 
 <ul id = "all-index">
   <% @shelters.each do |shelter| %>
-  <p><%= link_to "#{shelter.name}", "/shelters/#{shelter.id}" %><%= link_to "Edit #{shelter.name}", "/shelters/#{shelter.id}/edit" %>
+  <p><%= link_to "#{shelter.name}", "/shelters/#{shelter.id}" %><%= link_to "Edit #{shelter.name}", "/shelters/#{shelter.id}/edit" , method: :get %>
   <% end %></p>
 </ul><br>
 <br>

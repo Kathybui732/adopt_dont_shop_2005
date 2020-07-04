@@ -3,6 +3,6 @@
 
 <%= form_tag "/shelters/#{@shelter.id}", method: :patch do %>
   <%= label_tag :name %><br>
-  <%= text_field_tag :name %><br>
+  <%= text_field_tag :name, "#{@shelter.name}" %><br>
   <%= submit_tag "Update Shelter" %><br>
 <% end %>
