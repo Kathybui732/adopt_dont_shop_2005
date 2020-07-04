@@ -6,5 +6,6 @@
   <p><%= pet.name %> (<%= pet.sex %>), <%= pet.approximate_age %></p>
   <p>Currently located at: <%= pet.shelter.name %></p>
   <p><%= link_to "Edit #{pet.name}", "/pets/#{pet.id}/edit", method: :get%></p>
+  <p><%= link_to "Delete: #{pet.name}", "/pets/#{pet.id}", method: :delete %></p>
 <% end %><br />
 <br />
