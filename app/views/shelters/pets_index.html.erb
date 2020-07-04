@@ -8,7 +8,10 @@
       <%= image_tag(pet.image, alt: pet.name, method: :get) %>
       <p><%= pet.name %></p>
       <p><%= pet.sex %>, <%= pet.approximate_age %></p>
+      <p><%= pet.status %></p>
     <% else %>
     <% end %>
   <% end %>
 </ul>
+
+<%= link_to "Create Pet", "/shelters/#{@shelter.id}/pets/new", method: :get %>

@@ -2,9 +2,8 @@
 
 <% @pets.each do |pet| %>
   <%= image_tag(pet.image, alt: pet.name, method: :get) %>
+  <%= link_to "#{pet.name}", "/pets/#{pet.id}", method: :get %>
   <p><%= pet.name %> (<%= pet.sex %>), <%= pet.approximate_age %></p>
   <p>Currently located at: <%= pet.shelter.name %></p>
 <% end %><br />
 <br />
-
-<%# <%= link_to "#{pet.name}", "/shelters/#{pet.id}" %>

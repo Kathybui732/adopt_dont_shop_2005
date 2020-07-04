@@ -227,7 +227,7 @@ Then I see each Pet that can be adopted from that Shelter with that shelter_id i
 ```
 
 ```
-[ ] done
+[X] done
 
 User Story 9, Pet Show
 
@@ -243,7 +243,7 @@ Then I see the pet with that id including the pet's:
 ```
 
 ```
-[ ] done
+[X] done
 
 User Story 10, Shelter Pet Creation
 
