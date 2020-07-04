@@ -14,6 +14,5 @@
 </ul>
 <br>
 <br>
+<%= link_to "Edit #{@shelter.name}", "/shelters/#{@shelter.id}/edit" , method: :get %>
 <%= link_to "Delete #{@shelter.name}", "/shelters/#{@shelter.id}", method: :delete %>
-
-<%# Need to add link for pet path %>

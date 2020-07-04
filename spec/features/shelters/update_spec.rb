@@ -5,7 +5,7 @@ RSpec.describe "update shelter" do
     it "can update the shelter" do
       shelter_1 = Shelter.create!(name: "Shelter 1", address: "123 shelter lane", city: "Denver", state: "CO", zip: 80207)
 
-      visit '/shelters'
+      visit "/shelters/#{shelter_1.id}"
       expect(page).to have_content("Shelter 1")
 
       click_on "Edit #{shelter_1.name}"

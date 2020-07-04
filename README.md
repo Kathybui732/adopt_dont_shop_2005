@@ -306,7 +306,7 @@ and I am redirected to the pet index page where I no longer see this pet
 Users should be able to use the site easily. This means making sure there are links/buttons to reach all parts of the site and the styling/layout is sensible.
 
 ```
-[ ] done
+[X] done
 
 User Story 13, Shelter Update From Shelter Index Page
 
