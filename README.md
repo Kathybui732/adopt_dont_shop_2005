@@ -318,7 +318,7 @@ I should be taken to that shelters edit page where I can update its information 
 ```
 
 ```
-[ ] done
+[X] done
 
 User Story 14, Shelter Delete From Shelter Index Page
 
