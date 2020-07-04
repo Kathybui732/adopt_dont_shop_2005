@@ -330,7 +330,7 @@ I am returned to the Shelter Index Page where I no longer see that shelter
 ```
 
 ```
-[ ] done
+[X] done
 
 User Story 15, Pet Update From Pets Index Page
 
