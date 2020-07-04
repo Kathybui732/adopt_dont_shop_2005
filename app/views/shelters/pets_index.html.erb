@@ -1,26 +1,41 @@
-<h1 class="page-header"><%= link_to "#{@shelter.name}", "/shelters/#{@shelter.id}", method: :get %></h1><br>
+<html>
+  <head>
+    <title><% @shelter.name %></title>
+    <link rel="stylesheet" href="stylesheets/reset.css" title="text/css" />
+    <link rel="stylesheet" href="stylesheets/main.css" title="text/css" />
+  </head>
 
-<nav class="menu">
-  <ul>
-    <li><%= link_to "Shelters", "/shelters", method: :get %></li>
-    <li><%= link_to "Pets", "/pets", method: :get %></li>
-  </ul>
-</nav>
+  <body>
+    <header>
+      <h1><%= link_to "#{@shelter.name}", "/shelters/#{@shelter.id}" %></h1>
+      <nav>
+        <ul>
+          <li><%= link_to "Shelters", "/shelters" %></li>
+          <li><%= link_to "Pets", "/pets" %></li>
+        </ul>
+      </nav>
+    </header>
 
-<h2 class="page-subtitle">Available Pets</h2>
-<p> <%= @pets.count %> pet's available for adoption </p>
-<ul class="list">
-  <% @pets.each do |pet| %>
-    <% if @shelter.id == pet.shelter_id %>
-      <%= image_tag(pet.image, alt: pet.name, method: :get) %>
-      <p><%= link_to "#{pet.name}", "/pets/#{pet.id}", method: :get %></p>
-      <p><%= pet.sex %>, <%= pet.approximate_age %></p>
-      <p><%= pet.status %></p>
-      <p><%= link_to "Edit #{pet.name}", "/pets/#{pet.id}/edit", method: :get %></p>
-      <p><%= link_to "Delete #{pet.name}", "/pets/#{pet.id}", method: :delete %></p>
-    <% else %>
-    <% end %>
-  <% end %>
-</ul>
-
-<%= link_to "Create Pet", "/shelters/#{@shelter.id}/pets/new", method: :get %>
+    <section class = "shelter-pet-index">
+      <h3>Available Pets</h3>
+      <br>
+      <p>There are <%= @pets.count %> pets available for adoption!!</p>
+      <br>
+      <br>
+      <br>
+      <% @pets.each do |pet| %>
+        <p><%= image_tag(pet.image, alt: pet.name, class: "shelter-pet-index-image") %></p>
+        <ul>
+          <li><%= link_to "#{pet.name}", "/pets/#{pet.id}" %></li>
+          <li><i><%= pet.sex %></i>, <%= pet.approximate_age %></li>
+          <li><%= pet.description %></li>
+          <li><strong><%= pet.status %></strong></li>
+        </ul>
+        <p><%= link_to "Edit #{pet.name}", "/pets/#{pet.id}/edit", method: :get %> || <%= link_to "Delete #{pet.name}", "/pets/#{pet.id}", method: :delete %></p>
+      <% end %>
+      <p>
+        <%= link_to "Create Pet", "/shelters/#{@shelter.id}/pets/new"%>
+      </p>
+    </section>
+  </body>
+</html>

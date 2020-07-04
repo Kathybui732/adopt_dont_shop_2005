@@ -1,0 +1,157 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  background: #9DE3E7;
+}
+
+header {
+  background: #098C92;
+  color: white;
+  height: 50px;
+  padding: 0 25px;
+}
+
+header h1 {
+  font-size: 35px;
+  float: left;
+  text-indent: 80px;
+  height: 35px;
+  margin-top: 8px;
+}
+
+header nav {
+  float: right;
+  margin-right: 20px;
+  margin-top: 8px;
+}
+
+nav li {
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+}
+
+nav li:hover {
+  cursor: pointer;
+}
+
+li a {
+  font-size: 15px;
+  background: #098C92;
+  border: 5px solid #098C92;
+  color: white;
+  text-decoration: none;
+}
+
+.show-info {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  margin: 50px;
+  margin-left: 80px;
+}
+
+.show-info li {
+  margin: 20px;
+}
+
+.show-info h3 {
+  font-size: 25px;
+}
+
+.show-index {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  margin: 50px;
+  margin-left: 80px;
+}
+
+.show-index li {
+  margin: 10px;
+}
+
+.show-index h3 {
+  font-size: 25px;
+  margin: 30px;
+}
+
+.shelter-index {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  margin: 50px;
+}
+
+.shelter-index li {
+  margin: 30px;
+}
+
+.shelter-index h3 {
+  font-size: 25px;
+  margin: 30px;
+}
+
+.pet-index {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  margin: 20px;
+}
+
+.pet-index li {
+  margin: 10px;
+}
+
+.pet-index h3 {
+  font-size: 25px;
+}
+
+.pet-index-image {
+  height: 50%;
+  width: 50%;
+}
+
+.pet-show-info {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  margin: 50px;
+  margin-left: 80px;
+}
+
+.pet-show-info li {
+  margin: 20px;
+}
+
+.pet-show-info h3 {
+  font-size: 25px;
+}
+
+.pet-show-info-image {
+  height: 50%;
+  width: 50%;
+}
+
+.form {
+  margin: 80px;
+}
+
+.shelter-pet-index {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+}
+
+.shelter-pet-index li {
+  margin: 30px;
+}
+
+.shelter-pet-index h3 {
+  font-size: 25px;
+  margin: 30px;
+}
+
+.shelter-pet-index-image {
+  height: 50%;
+  width: 50%;
+}

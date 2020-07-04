@@ -13,7 +13,7 @@ RSpec.describe "pets show page" do
     expect(page).to have_content(pet_1.name)
     expect(page).to have_content(pet_1.name)
     expect(page).to have_content(pet_1.name)
-    expect(page).to have_content("Status: #{pet_1.status}")
+    expect(page).to have_content(" #{pet_1.status}")
   end
 
   it "can click on pet's name anywhere on page and be taken to pet's show page" do

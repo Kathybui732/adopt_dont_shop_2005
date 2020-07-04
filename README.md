@@ -403,7 +403,7 @@ Then I see a link to take me to that shelter's pets page ('/shelters/:id/pets')
 ```
 
 ```
-[ ] done
+[X] done
 
 User Story 22, Styling
 
@@ -417,7 +417,7 @@ Then I should see a reasonably well styled page
 ## Extensions
 
 ```
-[ ] done
+[X] done
 
 User Story 23, Shelter Pet Count
 
