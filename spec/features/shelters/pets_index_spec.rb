@@ -53,6 +53,43 @@ RSpec.describe "shelter pet index page" do
     expect(page).to_not have_content("#{pet_1.name}")
     expect(page).to have_content("#{pet_2.name}")
   end
+
+  it "can click on pet's name anywhere on page and be taken to pet's show page" do
+
+    shelter_1 = Shelter.create!(name: "Shelter 1", address: "123 shelter lane", city: "Denver", state: "CO", zip: 80207)
+    pet_1 = Pet.create!(image: "https://cdn.pixabay.com/photo/2017/09/25/13/12/dog-2785074_960_720.jpg", name: "Riley", approximate_age: 3, sex: "Male", shelter_id: shelter_1.id)
+
+    visit "shelters/#{shelter_1.id}pets/"
+
+    expect(page).to have_link("#{pet_1.name}", count: 1, exact: true)
+  end
+
+  it "can click on shelter's name anywhere on page and be taken to shelter's show page" do
+    shelter_1 = Shelter.create!(name: "Shelter 1", address: "123 shelter lane", city: "Denver", state: "CO", zip: 80207)
+    pet_1 = Pet.create!(image: "https://cdn.pixabay.com/photo/2017/09/25/13/12/dog-2785074_960_720.jpg", name: "Riley", approximate_age: 3, sex: "Male", shelter_id: shelter_1.id)
+
+    visit "shelters/#{shelter_1.id}pets/"
+
+    expect(page).to have_link("#{shelter_1.name}", count: 2, exact: true)
+  end
+
+  it "can click on a 'Shelter' link redirect me back to shelter index page" do
+    shelter_1 = Shelter.create!(name: "Shelter 1", address: "123 shelter lane", city: "Denver", state: "CO", zip: 80207)
+    pet_1 = Pet.create!(image: "https://cdn.pixabay.com/photo/2017/09/25/13/12/dog-2785074_960_720.jpg", name: "Riley", approximate_age: 3, sex: "Male", shelter_id: shelter_1.id)
+
+    visit "shelters/#{shelter_1.id}pets/"
+
+    expect(page).to have_link("Shelters", count: 1, exact: true)
+  end
+
+  it "can click on a 'Pets' link redirect me back to pet index page" do
+    shelter_1 = Shelter.create!(name: "Shelter 1", address: "123 shelter lane", city: "Denver", state: "CO", zip: 80207)
+    pet_1 = Pet.create!(image: "https://cdn.pixabay.com/photo/2017/09/25/13/12/dog-2785074_960_720.jpg", name: "Riley", approximate_age: 3, sex: "Male", shelter_id: shelter_1.id)
+
+    visit "shelters/#{shelter_1.id}pets/"
+
+    expect(page).to have_link("Pets", count: 1, exact: true)
+  end
 end
 
 # As a visitor

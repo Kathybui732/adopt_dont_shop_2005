@@ -1,5 +1,12 @@
 <h1 class="page-header">Add a new pet for adoption!</h1>
 
+<nav class="menu">
+  <ul>
+    <li><%= link_to "Shelters", "/shelters", method: :get %></li>
+    <li><%= link_to "Pets", "/pets", method: :get %></li>
+  </ul>
+</nav>
+
 <p class = "instructions">Please provide information about your pet</p>
   <%= form_tag "/shelters/#{@shelter_id}/pets" do %>
   <%= label_tag :image %>

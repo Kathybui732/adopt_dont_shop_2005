@@ -1,5 +1,11 @@
-<h1 class = "page-header">Edit <%= @shelter.name %> </h1>
+<h1 class = "page-header">Edit <%= link_to "#{@shelter.name}", "/shelters/#{@shelter.id}", method: :get %></h1>
 
+<nav class="menu">
+  <ul>
+    <li><%= link_to "Shelters", "/shelters", method: :get %></li>
+    <li><%= link_to "Pets", "/pets", method: :get %></li>
+  </ul>
+</nav>
 
 <%= form_tag "/shelters/#{@shelter.id}", method: :patch do %>
   <%= label_tag :name %><br>
