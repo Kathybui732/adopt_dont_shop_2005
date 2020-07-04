@@ -341,7 +341,7 @@ When I click the link
 I should be taken to that pets edit page where I can update its information just like in User Story 11
 ```
 ```
-[ ] done
+[X] done
 
 User Story 16, Pet Delete From Pets Index Page
 
