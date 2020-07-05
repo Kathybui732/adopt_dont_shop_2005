@@ -14,7 +14,7 @@
       <img src="./assets/0.12.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2020-07-05T11:07:12-06:00">2020-07-05T11:07:12-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2020-07-05T15:20:14-06:00">2020-07-05T15:20:14-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -43,8 +43,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>482</b> relevant lines,
-    <span class="green"><b>482</b> lines covered</span> and
+    <b>483</b> relevant lines,
+    <span class="green"><b>483</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -282,9 +282,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#52bcf98295572863d2f03cfe79f0f326b3d7004d" class="src_link" title="config/routes.rb">config/routes.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">21</td>
-            <td class="cell--number">16</td>
-            <td class="cell--number">16</td>
+            <td class="cell--number">22</td>
+            <td class="cell--number">17</td>
+            <td class="cell--number">17</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -3869,8 +3869,8 @@
     
 
     <div class="t-line-summary">
-      <b>16</b> relevant lines.
-      <span class="green"><b>16</b> lines covered</span> and
+      <b>17</b> relevant lines.
+      <span class="green"><b>17</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -3910,7 +3910,7 @@
 
             
 
-            <code class="ruby">  get &#39;/shelters&#39;, to: &#39;shelters#index&#39;</code>
+            <code class="ruby">  get &#39;/&#39;, to: &#39;shelters#index&#39;</code>
           </li>
         </div>
       
@@ -3921,7 +3921,7 @@
 
             
 
-            <code class="ruby">  get &#39;/shelters/new&#39;, to: &#39;shelters#new&#39;</code>
+            <code class="ruby">  get &#39;/shelters&#39;, to: &#39;shelters#index&#39;</code>
           </li>
         </div>
       
@@ -3932,7 +3932,7 @@
 
             
 
-            <code class="ruby">  post &#39;/shelters&#39;, to: &#39;shelters#create&#39;</code>
+            <code class="ruby">  get &#39;/shelters/new&#39;, to: &#39;shelters#new&#39;</code>
           </li>
         </div>
       
@@ -3943,7 +3943,7 @@
 
             
 
-            <code class="ruby">  get &#39;/shelters/:id&#39;, to: &#39;shelters#show&#39;</code>
+            <code class="ruby">  post &#39;/shelters&#39;, to: &#39;shelters#create&#39;</code>
           </li>
         </div>
       
@@ -3954,7 +3954,7 @@
 
             
 
-            <code class="ruby">  get &#39;/shelters/:id/edit&#39;, to: &#39;shelters#edit&#39;</code>
+            <code class="ruby">  get &#39;/shelters/:id&#39;, to: &#39;shelters#show&#39;</code>
           </li>
         </div>
       
@@ -3965,7 +3965,7 @@
 
             
 
-            <code class="ruby">  patch &#39;/shelters/:id&#39;, to: &#39;shelters#update&#39;</code>
+            <code class="ruby">  get &#39;/shelters/:id/edit&#39;, to: &#39;shelters#edit&#39;</code>
           </li>
         </div>
       
@@ -3976,18 +3976,18 @@
 
             
 
-            <code class="ruby">  delete &#39;/shelters/:id&#39;, to: &#39;shelters#destroy&#39;</code>
+            <code class="ruby">  patch &#39;/shelters/:id&#39;, to: &#39;shelters#update&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="10">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="10">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">  delete &#39;/shelters/:id&#39;, to: &#39;shelters#destroy&#39;</code>
           </li>
         </div>
       
@@ -4003,95 +4003,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="12">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  get &#39;/pets&#39;, to: &#39;pets#index&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="13">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  get &#39;/shelters/:shelter_id/pets&#39;, to: &#39;shelters#pets_index&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="14">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  get &#39;/shelters/:shelter_id/pets/new&#39;, to: &#39;pets#new&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="15">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  post &#39;/shelters/:shelter_id/pets&#39;, to: &#39;pets#create&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="16">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  get &#39;/pets/:id&#39;, to: &#39;pets#show&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="17">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  get &#39;/pets/:id/edit&#39;, to: &#39;pets#edit&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="18">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  patch &#39;/pets/:id&#39;, to: &#39;pets#update&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="19">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  delete &#39;/pets/:id&#39;, to: &#39;pets#destroy&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="20">
+          <li class="never" data-hits="" data-linenumber="12">
             
             
 
@@ -4102,7 +4014,106 @@
         </div>
       
         <div>
+          <li class="covered" data-hits="1" data-linenumber="13">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  get &#39;/pets&#39;, to: &#39;pets#index&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="14">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  get &#39;/shelters/:shelter_id/pets&#39;, to: &#39;shelters#pets_index&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="15">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  get &#39;/shelters/:shelter_id/pets/new&#39;, to: &#39;pets#new&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="16">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  post &#39;/shelters/:shelter_id/pets&#39;, to: &#39;pets#create&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="17">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  get &#39;/pets/:id&#39;, to: &#39;pets#show&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="18">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  get &#39;/pets/:id/edit&#39;, to: &#39;pets#edit&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="19">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  patch &#39;/pets/:id&#39;, to: &#39;pets#update&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="20">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  delete &#39;/pets/:id&#39;, to: &#39;pets#destroy&#39;</code>
+          </li>
+        </div>
+      
+        <div>
           <li class="never" data-hits="" data-linenumber="21">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="22">
             
             
 

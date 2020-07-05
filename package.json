@@ -2,13 +2,17 @@
   "name": "adopt_dont_shop_2005",
   "version": "1.0.0",
   "description": "Pet shelter app",
-  "main": "index.js",
+  "main": "node app.js",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "index.js"
+    "dev": "react-scripts start",
+    "start": "serve -s build",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -24,5 +28,8 @@
   "bugs": {
     "url": "https://github.com/Kathybui732/adopt_dont_shop_2005/issues"
   },
-  "homepage": "https://github.com/Kathybui732/adopt_dont_shop_2005#readme"
+  "homepage": "https://github.com/Kathybui732/adopt_dont_shop_2005#readme",
+  "dependencies": {
+    "serve": "^11.3.2"
+  }
 }
