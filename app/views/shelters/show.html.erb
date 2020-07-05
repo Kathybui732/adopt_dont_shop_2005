@@ -16,30 +16,34 @@
       </nav>
     </header>
 
-    <section class = "show-info">
-      <h3>Information</h3>
-      <br>
-      <ul>
-        <li><%= link_to "#{@shelter.name}", "/shelters/#{@shelter.id}" %></li>
-        <li><%= @shelter.address %><br>
-          <%= @shelter.city %>, <%= @shelter.state %> <%= @shelter.zip %></li>
-      </ul>
+    <section>
+      <article class = "show-info">
+        <h3>Information</h3>
+        <br>
+        <ul>
+          <li><%= link_to "#{@shelter.name}", "/shelters/#{@shelter.id}" %></li>
+          <li><%= @shelter.address %><br>
+            <%= @shelter.city %>, <%= @shelter.state %> <%= @shelter.zip %></li>
+          </ul>
+      </article>
     </section>
 
     <section>
       <article class = "show-index">
         <h3>Shelter's Pet(s)</h3>
+        <p>There are <%= @shelter.pets.count %> pets available for adoption!!</p><br>
         <% @shelter.pets.each do |pet| %>
+        <br>
         <ul>
           <li><%= link_to pet.name, "/pets/#{pet.id}" %></li>
         </ul>
         <% end %>
-        <p>
+        <p><br>
           <%= link_to "See all of #{@shelter.name}'s pets", "/shelters/#{@shelter.id}/pets" %>
         </p><br>
         <br>
         <p>
-          <%= link_to "Edit #{@shelter.name}", "/shelters/#{@shelter.id}/edit" %> || <%= link_to "Delete #{@shelter.name}", "/shelters/#{@shelter.id}", method: :delete %>
+          <%= link_to "Update Shelter", "/shelters/#{@shelter.id}/edit" %> || <%= link_to "Delete Shelter", "/shelters/#{@shelter.id}", method: :delete %>
         </p>
       </article>
     </section>

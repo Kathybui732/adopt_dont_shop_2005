@@ -10,7 +10,7 @@ RSpec.describe "delete shelter from index" do
 
       visit "/shelters/#{shelter_1.id}"
 
-      click_on "Delete #{shelter_1.name}"
+      click_on "Delete Shelter"
 
       expect(current_path).to eq('/shelters')
       expect(page).to_not have_content("Shelter 1")

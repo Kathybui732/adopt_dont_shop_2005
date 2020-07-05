@@ -1,6 +1,11 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
 body {
   font-family: 'Raleway', sans-serif;
-  background: #9DE3E7;
+  background: #CEF7F9;
 }
 
 header {
@@ -12,8 +17,7 @@ header {
 
 header h1 {
   font-size: 35px;
-  float: left;
-  text-indent: 80px;
+  text-align: center;
   height: 35px;
   margin-top: 8px;
 }
@@ -42,12 +46,14 @@ li a {
   text-decoration: none;
 }
 
+body section {
+  width: 100%;
+}
+
 .show-info {
-  display: inline-block;
   text-align: center;
   vertical-align: top;
   margin: 50px;
-  margin-left: 80px;
 }
 
 .show-info li {
@@ -59,11 +65,9 @@ li a {
 }
 
 .show-index {
-  display: inline-block;
   text-align: center;
   vertical-align: top;
   margin: 50px;
-  margin-left: 80px;
 }
 
 .show-index li {
@@ -76,7 +80,6 @@ li a {
 }
 
 .shelter-index {
-  display: inline-block;
   text-align: center;
   vertical-align: top;
   margin: 50px;
@@ -92,9 +95,7 @@ li a {
 }
 
 .pet-index {
-  display: inline-block;
   text-align: center;
-  vertical-align: top;
   margin: 20px;
 }
 
@@ -107,16 +108,15 @@ li a {
 }
 
 .pet-index-image {
-  height: 50%;
-  width: 50%;
+  align-content: center;
+  height: 30%;
+  width: 30%;
 }
 
 .pet-show-info {
-  display: inline-block;
   text-align: center;
   vertical-align: top;
   margin: 50px;
-  margin-left: 80px;
 }
 
 .pet-show-info li {
@@ -136,14 +136,18 @@ li a {
   margin: 80px;
 }
 
+.form h4 {
+  margin-bottom: 25px;
+  font-size: 25px
+}
+
 .shelter-pet-index {
-  display: inline-block;
   text-align: center;
   vertical-align: top;
 }
 
 .shelter-pet-index li {
-  margin: 30px;
+  margin: 20px;
 }
 
 .shelter-pet-index h3 {
@@ -152,6 +156,6 @@ li a {
 }
 
 .shelter-pet-index-image {
-  height: 50%;
-  width: 50%;
+  height: 20%;
+  width: 20%;
 }

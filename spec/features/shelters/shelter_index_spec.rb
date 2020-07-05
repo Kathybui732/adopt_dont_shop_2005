@@ -10,6 +10,7 @@ RSpec.describe "shetler index" do
     expect(page).to have_content(shelter_1.name)
     expect(page).to have_content(shelter_2.name)
   end
+
   it "can update every shelter" do
     shelter_1 = Shelter.create!(name: "Shelter 1", address: "123 shelter lane", city: "Denver", state: "CO", zip: 80207)
     shelter_2 = Shelter.create!(name: "Shelter 2", address: "123 shelter lane", city: "Denver", state: "CO", zip: 80207)
@@ -23,7 +24,7 @@ RSpec.describe "shetler index" do
 
     fill_in :name, with: "New name"
 
-    click_on "Update Shelter"
+    click_on "Submit"
     expect(current_path).to eq("/shelters")
     expect(page).to_not have_content("Edit #{shelter_1.name}")
     expect(page).to have_content("New name")

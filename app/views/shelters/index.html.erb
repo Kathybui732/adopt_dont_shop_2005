@@ -16,21 +16,23 @@
       </nav>
     </header>
 
-    <section class = "shelter-index">
-      <% @shelters.each do |shelter| %>
-      <ul>
-        <li><%= link_to "#{shelter.name}", "/shelters/#{shelter.id}" %></li>
-        <li><%= shelter.address %><br>
-          <%= shelter.city %>, <%= shelter.state %> <%= shelter.zip %>
-        </li>
-      </ul>
-      <p>
-        <%= link_to "Edit #{shelter.name}", "/shelters/#{shelter.id}/edit" %> || <%= link_to "Delete #{shelter.name}", "/shelters/#{shelter.id}", method: :delete %>
-      </p>
-      <% end %>
-      <p>
-        <%= link_to "New Shelter", '/shelters/new' %>
-      </p>
+    <section>
+      <article class="shelter-index">
+        <% @shelters.each do |shelter| %>
+        <ul>
+          <li><%= link_to "#{shelter.name}", "/shelters/#{shelter.id}" %></li>
+          <li><%= shelter.address %><br>
+            <%= shelter.city %>, <%= shelter.state %> <%= shelter.zip %>
+          </li>
+        </ul>
+        <p>
+          <%= link_to "Edit #{shelter.name}", "/shelters/#{shelter.id}/edit" %> || <%= link_to "Delete #{shelter.name}", "/shelters/#{shelter.id}", method: :delete %>
+        </p>
+        <% end %>
+        <p>
+          <%= link_to "New Shelter", '/shelters/new' %>
+        </p>
+      </article>
     </section>
   </body>
 </html>

@@ -16,26 +16,32 @@
       </nav>
     </header>
 
-    <section class = "shelter-pet-index">
-      <h3>Available Pets</h3>
-      <br>
-      <p>There are <%= @pets.count %> pets available for adoption!!</p>
+    <section>
       <br>
       <br>
-      <br>
-      <% @pets.each do |pet| %>
+      <article class = "shelter-pet-index">
+        <h3>Available Pets</h3>
+        <br>
+        <p>There are <%= @pets.count %> pets available for adoption!!</p>
+        <br>
+        <br>
+        <br>
+        <% @pets.each do |pet| %>
         <p><%= image_tag(pet.image, alt: pet.name, class: "shelter-pet-index-image") %></p>
         <ul>
           <li><%= link_to "#{pet.name}", "/pets/#{pet.id}" %></li>
-          <li><i><%= pet.sex %></i>, <%= pet.approximate_age %></li>
           <li><%= pet.description %></li>
+          <li><i><%= pet.sex %></i>, <%= pet.approximate_age %></li>
           <li><strong><%= pet.status %></strong></li>
+          <li>Currently located at: <%= link_to "#{pet.shelter.name}", "/shelters/#{pet.shelter.id}" %></li>
         </ul>
         <p><%= link_to "Edit #{pet.name}", "/pets/#{pet.id}/edit", method: :get %> || <%= link_to "Delete #{pet.name}", "/pets/#{pet.id}", method: :delete %></p>
-      <% end %>
-      <p>
-        <%= link_to "Create Pet", "/shelters/#{@shelter.id}/pets/new"%>
-      </p>
+        <% end %><br>
+        <br>
+        <p>
+          <%= link_to "Create Pet", "/shelters/#{@shelter.id}/pets/new"%>
+        </p>
+      </article>
     </section>
   </body>
 </html>

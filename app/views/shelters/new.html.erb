@@ -16,24 +16,26 @@
       </nav>
     </header>
 
-    <section class = "form">
-      <h4>Please provide information about the new shelter here:</h4>
-      <p>
-        <%= form_tag "/shelters" do %>
-        <%= label_tag :name %>
-        <%= text_field_tag :name %><br>
-        <%= label_tag :address %>
-        <%= text_field_tag :address %><br>
-        <%= label_tag :city %>
-        <%= text_field_tag :city %><br>
-        <%= label_tag :state %>
-        <%= text_field_tag :state %><br>
-        <%= label_tag :zip %>
-        <%= text_field_tag :zip %><br>
-        <br>
-        <%= submit_tag "Create Shelter" %>
-        <% end %>
-      </p>
+    <section>
+      <article class="form">
+        <h4>Please provide information about the new shelter here:</h4>
+        <p>
+          <%= form_tag "/shelters" do %>
+          <%= label_tag :name %>
+          <%= text_field_tag :name %><br>
+          <%= label_tag :address %>
+          <%= text_field_tag :address %><br>
+          <%= label_tag :city %>
+          <%= text_field_tag :city %><br>
+          <%= label_tag :state %>
+          <%= text_field_tag :state %><br>
+          <%= label_tag :zip %>
+          <%= text_field_tag :zip %><br>
+          <br>
+          <%= submit_tag "Create Shelter" %>
+          <% end %>
+        </p>
+      </article>
     </section>
   </body>
 </html>

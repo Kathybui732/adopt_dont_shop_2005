@@ -16,10 +16,11 @@
       </nav>
     </header>
 
-    <section class="form">
-      <h4>Please provide information about your pet</h4>
-      <p>
-        <%= form_tag "/shelters/#{@shelter_id}/pets" do %>
+    <section>
+      <article class="form">
+        <h4>Please provide information about your pet</h4>
+        <p>
+          <%= form_tag "/shelters/#{@shelter_id}/pets" do %>
           <%= label_tag :image %>
           <%= text_field_tag :image %><br>
           <%= label_tag :name %>
@@ -32,8 +33,9 @@
           <%= text_field_tag :sex %><br>
           <br>
           <%= submit_tag "Create Pet" %>
-        <% end %>
-      </p>
+          <% end %>
+        </p>
+      </article>
     </section>
   </body>
 </html>

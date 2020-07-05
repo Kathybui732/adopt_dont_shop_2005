@@ -8,12 +8,12 @@ RSpec.describe "update shelter" do
       visit "/shelters/#{shelter_1.id}"
       expect(page).to have_content("Doggo")
 
-      click_on "Edit #{shelter_1.name}"
+      click_on "Update Shelter"
       expect(current_path).to eq("/shelters/#{shelter_1.id}/edit")
 
       fill_in :name, with: "Pet Shelter"
 
-      click_on "Update Shelter"
+      click_on "Submit"
       expect(current_path).to eq('/shelters')
 
       expect(page).to have_content("Pet Shelter")

@@ -16,18 +16,20 @@
       </nav>
     </header>
 
-    <section class = "pet-show-info">
-      <h3>Information</h3>
-      <p><%= image_tag(@pet.image, alt: @pet.name, class: "pet-show-info-image") %></p>
-      <ul>
-        <li><i><%= @pet.sex %></i>, <%= @pet.approximate_age %> years old</li>
-        <li><%= @pet.description %></li>
-        <li><strong><%= @pet.status %></strong></li>
-        <li>Currently located at: <%= link_to "#{@pet.shelter.name}", "/shelters/#{@pet.shelter.id}" %></li>
-      </ul>
-      <p>
-        <%= link_to "Update Pet", "/pets/#{@pet.id}/edit", method: :get %> || <%= link_to "Delete Pet", "/pets/#{@pet.id}", method: :delete %>
-      </p>
+    <section>
+      <article class = "pet-show-info">
+        <h3>Information</h3>
+        <p><%= image_tag(@pet.image, alt: @pet.name, class: "pet-show-info-image") %></p>
+        <ul>
+          <li><i><%= @pet.sex %></i>, <%= @pet.approximate_age %> years old</li>
+          <li><%= @pet.description %></li>
+          <li><strong><%= @pet.status %></strong></li>
+          <li>Currently located at: <%= link_to "#{@pet.shelter.name}", "/shelters/#{@pet.shelter.id}" %></li>
+        </ul>
+        <p>
+          <%= link_to "Update Pet", "/pets/#{@pet.id}/edit", method: :get %> || <%= link_to "Delete Pet", "/pets/#{@pet.id}", method: :delete %>
+        </p>
+      </article>
     </section>
   </body>
 </html>

@@ -17,6 +17,7 @@ RSpec.describe "shelter pet index page" do
 
     expect(page).to_not have_content(pet_2.name)
   end
+
   it "can update each pet" do
     shelter_1 = Shelter.create!(name: "Shelter 1", address: "123 shelter lane", city: "Denver", state: "CO", zip: 80207)
     pet_1 = Pet.create!(image: "https://cdn.pixabay.com/photo/2017/09/25/13/12/dog-2785074_960_720.jpg", name: "Riley", approximate_age: 3, sex: "Male", shelter_id: shelter_1.id)
@@ -39,6 +40,7 @@ RSpec.describe "shelter pet index page" do
     expect(page).to have_content("Justin")
     expect(page).to have_content("#{pet_2.name}")
   end
+  
   it "can delete each pet" do
     shelter_1 = Shelter.create!(name: "Shelter 1", address: "123 shelter lane", city: "Denver", state: "CO", zip: 80207)
     pet_1 = Pet.create!(image: "https://cdn.pixabay.com/photo/2017/09/25/13/12/dog-2785074_960_720.jpg", name: "Riley", approximate_age: 3, sex: "Male", shelter_id: shelter_1.id)
