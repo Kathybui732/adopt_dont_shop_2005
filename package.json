@@ -1,6 +1,28 @@
 {
-  "name": "adopt_dont_shop",
-  "private": true,
-  "dependencies": {},
-  "heroku-postbuild": "npm run build”
+  "name": "adopt_dont_shop_2005",
+  "version": "1.0.0",
+  "description": "Pet shelter app",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kathybui732/adopt_dont_shop_2005.git"
+  },
+  "keywords": [
+    "Adopt",
+    "Pet",
+    "Shelter"
+  ],
+  "author": "Kathy Bui",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kathybui732/adopt_dont_shop_2005/issues"
+  },
+  "homepage": "https://github.com/Kathybui732/adopt_dont_shop_2005#readme"
 }
