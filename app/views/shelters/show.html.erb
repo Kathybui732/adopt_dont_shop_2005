@@ -45,6 +45,11 @@
         <p>
           <%= link_to "Update Shelter", "/shelters/#{@shelter.id}/edit" %> || <%= link_to "Delete Shelter", "/shelters/#{@shelter.id}", method: :delete %>
         </p>
+        <br>
+        <br>
+        <p>
+          <%= link_to "Create Pet", "/shelters/#{@shelter.id}/pets/new"%>
+        </p>
       </article>
     </section>
   </body>

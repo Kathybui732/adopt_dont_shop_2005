@@ -40,6 +40,26 @@ RSpec.describe "create new shelter" do
 
     expect(page).to have_link("Pets", count: 1, exact: true)
   end
+
+  it "can cancel create and be redirected back to the shelter pet index" do
+
+    visit '/shelters'
+    expect(page).to_not have_content("Pet Shelter")
+
+    click_on "New Shelter"
+    expect(current_path).to eq('/shelters/new')
+
+    fill_in :name, with: "Pet Shelter"
+    fill_in :address, with: "123 Shelter Ln"
+    fill_in :city, with: "Denver"
+    fill_in :state, with: "CO"
+    fill_in :zip, with: 80207
+
+    click_on "Cancel"
+
+    expect(current_path).to eq('/shelters')
+    expect(page).to_not have_content("Pet Shelter")
+  end
 end
 
 # As a visitor

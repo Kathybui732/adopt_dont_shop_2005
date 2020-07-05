@@ -20,7 +20,7 @@ RSpec.describe "pet show page" do
     expect(page).to_not have_content("Riley")
     expect(page).to have_content("Ronny")
   end
-  
+
   it "can click on pet's name anywhere on page and be taken to pet's show page" do
 
     shelter_1 = Shelter.create!(name: "Shelter 1", address: "123 shelter lane", city: "Denver", state: "CO", zip: 80207)
